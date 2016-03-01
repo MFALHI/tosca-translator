@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/style.css') }}">
+<style>
+#header {
+    background-color:#26343f;
+/*    height:50px;*/
+    padding:5px;
+    text-align:center;
+}
+#nav {
+    line-height:30px;
+    background-color:#313f4a;
+    height:100%;
+    width:100px;
+    float:left;
+    padding:5px;
+}
+#body {
+    width:500px;
+    float:left;
+    padding:20px;
+}
+#footer {
+    background-color:#26343f;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+</style>
+  </head>
+  <body>
+    <div id="header">
+<!--       <table border="2" style="width:100%" height="80">
+        <tr>
+          <td bgcolor="red"> -->
+          <h2>{{ title }}</h2>
+<!--           </td>
+        </tr>
+      </table> -->
+    </div>
+    <div id="nav">
+    </div>
+    <div id="body">
+      {% if status %}
+       <div>
+       	<h3><font color="red">{{ status }}</font></h3>
+       </div>
+       {% endif %}
+
+       <div>
+        <h3>Submit a file for translation</h3>
+        <h4>Some standalone TOSCA Templates can be found here:</h4>
+        <p><a href="https://github.com/openstack/heat-translator/tree/master/translator/tests/data">
+          https://github.com/openstack/heat-translator/tree/master/translator/tests/data
+        </a></p>
+        {% if output %}
+        <hr>
+        <h3>HOT Output</h3>
+        <div style="font-size:12px">
+         {{ output }}
+        </div>
+        {% endif %}
+
+        <!-- Table of use cases -->
+        <table>
+          <tr>
+            <th>Template</th><th>Paramaters</th>
+            <td><a link='https://github.com/openstack/heat-translator/blob/master/translator/tests/data/tosca_helloworld.yaml'>tosca_helloworld.yaml</a>N/A</td>
+          </tr>
+        </table>
+
+        {% if DEBUG %}
+        <hr>
+        <h3>Debug</h3>
+        <h4>OS Environment Vars.</h4>
+        <div style="font-size:10px">
+          <ul>
+            {% for var in items %}
+            <li><p><b>{{ var[0] }} : </b>{{ var[1] }}</b></p></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

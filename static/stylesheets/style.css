@@ -1,0 +1,98 @@
+/* style.css
+ * This file provides css styles.
+ */
+
+body, html {
+	/*background-color: #3b4b54;*/
+	background-color: #313f4a;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	font-family: "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #ffffff;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+pre {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #006699;
+    /* color: blue; */
+	/* color: #00aed1; */
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.blue-ghost {
+    border: 2px solid #313f4a;
+    color: #313f4a;
+}
+
+.white-ghost {
+    border: 2px solid #fff;
+    color: #fff
+}
+
+.ghost-button {
+    display:inline-block;
+    font-weight:800;
+    line-height:1em;
+    letter-spacing:.25px;
+    padding:.75rem 2rem;
+    text-align:center;
+    text-transform:uppercase
+}
+
+.blue-ghost, .white-ghost {
+    transition:background-color .5s ease-in-out,color .5s ease-in-out
+}
+
+/* for anchor <a> that looks like a gradient button */
+.dw-button-large {
+    background: transparent -moz-linear-gradient(center top , #F90, #CC6700) repeat scroll 0px 0px;
+    border: 1px solid #CC6700;
+    border-radius: 5px !important;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    color: #FFF !important;
+    display: block;
+    float: left;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 7px 0px 0px 15px;
+    padding: 2px 15px !important;
+    text-decoration: none;
+    text-shadow: none;
+    width: auto;
+    outline: 0px none;
+}
+
+.dw-button-large:hover {
+    background: transparent -moz-linear-gradient(center top , #30F1D8, #0C5249) repeat scroll 0px 0px;
+    border: 1px solid #0C5249;
+    border-radius: 5px !important;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    color: #FFF !important;
+    display: block;
+    float: left;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 7px 0px 0px 15px;
+    padding: 2px 15px !important;
+    text-decoration: none;
+    text-shadow: none;
+    width: auto;
+    outline: 0px none;
+}
