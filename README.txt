@@ -1,6 +1,6 @@
-# Python Starter Application
+# OASIS TOSCA Translator in Python
 
-Bluemix provides a python starter application as a template so that you can add your code and push the changes back to the Bluemix environment.
+This is a Python Flask-based micro service that wraps the Pypi libraries “tosco-parser” and “heat-translator” and uses them to translate of application service templates written against the OASIS Topology Orchestration Spec. for Cloud Applications (TOSCA) Simple Profile in YAML v1.0 standard specification and convert them to the OpenStack Heat Orchestration template (HOT) format.  Essentially offering a RESTful micro service (single API) via an HTTP Post command. It also supports HTTP Get by providing a GUI experience for the same translation using Flask templates.
 
 
 ## Files
@@ -9,11 +9,11 @@ The Python starter application has files as below:
 
 *   server.py
 
-	This file contains a simple web server written in the Python programming language.
+	This file contains a server for the translation service using Python Flask.
 
 *   static/
 
-	This directory contains the static files that are part of this application.
+	This directory contains the static files used for the “HTTP Get” translator GUI.
 
 *   Procfile
 
