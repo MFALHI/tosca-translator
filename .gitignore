@@ -60,3 +60,9 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# OSX
+.DS_Store
+
+# TOSCA Translator
+*.hot
