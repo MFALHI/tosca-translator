@@ -65,4 +65,5 @@ target/
 .DS_Store
 
 # TOSCA Translator
+outputs/
 *.hot
