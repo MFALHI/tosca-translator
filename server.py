@@ -12,7 +12,7 @@
 
 # from flask import Response, redirect, Markup, url_for
 from flask import Flask, request, render_template, redirect, url_for
-from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 import os
 import uuid
 import shutil
