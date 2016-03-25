@@ -31,13 +31,12 @@ files = {'file': (TOSCA_TEST_FILE,
                   TOSCA_MIME_TYPE_TEMPLATE,
                   fileheader)}
 
-resp = requests.post(TOSCA_TRANSLATOR_ENDPOINT_
-    DEV,
+resp = requests.post(TOSCA_TRANSLATOR_ENDPOINT_DEV,
                      files=files, data=formdata)
 
 # DEBUG trace of response
 print "vvvvvvvvvvvvvvvvvvvv"
-print "response.satus_code: " + str(resp.status_code)
+print "response.status_code: " + str(resp.status_code)
 print "response.encoding: " + resp.encoding
 print "response.headers:"
 print resp.headers
